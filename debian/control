@@ -1,0 +1,50 @@
+Source: libsrt
+Priority: optional
+Maintainer: Tim Prime <tdprime@teleosmedia.com>
+Build-Depends: debhelper (>=9),autotools-dev
+Standards-Version: 3.9.6
+Section: libs
+Homepage: https://www.srtalliance.org
+Vcs-Git: https://github.com/Haivision/srt.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/libsrt.git
+
+Package: libsrt-dev
+Section: libdevel
+Architecture: any
+Depends: libsrt1 (= ${binary:Version}), ${misc:Depends}
+Description: Secure Reliable Transport (SRT)
+ Secure Reliable Transport (SRT) is a proprietary transport technology
+ that optimizes streaming performance across unpredictable networks,
+ such as the Internet.
+ .
+ SRT is applied to contribution and distribution endpoints as part of
+ a video stream workflow to deliver the best quality and lowest latency
+ video at all times.
+ .
+ As audio/video packets are streamed from a source to a destination
+ device, SRT detects and adapts to the real-time network conditions
+ between the two endpoints. SRT helps compensate for jitter and
+ bandwidth fluctuations due to congestion over noisy networks, such as
+ the Internet. Its error recovery mechanism minimizes the packet loss
+ typical of Internet connections. And SRT supports AES encryption for
+ end-to-end security, keeping your streams safe from prying eyes.
+
+Package: libsrt1
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Secure Reliable Transport (SRT)
+ Secure Reliable Transport (SRT) is a proprietary transport technology
+ that optimizes streaming performance across unpredictable networks,
+ such as the Internet.
+ .
+ SRT is applied to contribution and distribution endpoints as part of
+ a video stream workflow to deliver the best quality and lowest latency
+ video at all times.
+ .
+ As audio/video packets are streamed from a source to a destination
+ device, SRT detects and adapts to the real-time network conditions
+ between the two endpoints. SRT helps compensate for jitter and
+ bandwidth fluctuations due to congestion over noisy networks, such as
+ the Internet. Its error recovery mechanism minimizes the packet loss
+ typical of Internet connections. And SRT supports AES encryption for
+ end-to-end security, keeping your streams safe from prying eyes.

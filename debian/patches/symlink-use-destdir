@@ -1,0 +1,11 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -684,7 +684,7 @@
+ 
+ 	if (SYMLINKABLE)
+ 		message(STATUS "BACKWARD COMPATIBLE 'stransmit': will use symbolic link")
+-		srt_install_symlink(srt-live-transmit ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_BINDIR}/stransmit)
++		srt_install_symlink(srt-live-transmit \\\$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_BINDIR}/stransmit)
+ 	elseif(${CMAKE_MAJOR_VERSION} LESS 3)
+ 		message(FATAL_ERROR "Your system can't install symbolic link to 'stransmit', copy-on-install requires cmake at least 3.0.2")
+ 	else()

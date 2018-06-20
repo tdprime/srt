@@ -1,0 +1,27 @@
+libsrt for Debian
+----------------
+
+This file describes information about the source package, see Debian policy
+manual section 4.14.
+
+1. Fetch source code
+	$ git clone https://github.com/Haivision/srt.git
+2. Find the latest tag
+	$ cd srt; git tag
+3. Checkout tagged version
+	$ git checkout v1.m.p
+4. Rename source directory
+	$ cd ..; mv srt libsrt-1.m.p
+5. Create tarball
+	$ cd libsrt-1.m.p
+	$ git archive --prefix=libsrt-1.m.p/ \
+		-o ../libsrt_1.m.p.orig.tar.gz -v v1.m.p
+6. Fetch and unpack debian directory
+	$ tar xoJf ../libsrt_*.debian.tar.xz
+7. Update debian/changelog
+8. Build it
+	$ dpkg-buildpackage -us -uc
+
+
+ -- Tim Prime <tdprime@teleosmedia.com>  Wed, 23 May 2018 19:56:30 +0000
+
